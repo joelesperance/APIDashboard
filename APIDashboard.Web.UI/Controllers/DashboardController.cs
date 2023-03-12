@@ -8,16 +8,22 @@ namespace APIDashboard.Web.UI.Controllers
     public class DashboardController : Controller
     {
         private QuoteOrchestrator quoteOrchestrator;
+        private APODOrchestrator apodOrchestrator;
+        private WeatherOrchestrator weatherOrchestrator;
 
         public DashboardController()
         {
             quoteOrchestrator = new QuoteOrchestrator();
+            apodOrchestrator = new APODOrchestrator();
+            weatherOrchestrator = new WeatherOrchestrator();
         }
 
         public IActionResult Index()
         {
             Quote quote = quoteOrchestrator.GetRandomQuote();
-            DashboardIndexViewModel viewModel = new DashboardIndexViewModel(quote);
+            APOD apod = apodOrchestrator.GetAPOD();
+            CurrentWeather.Rootobject weather = weatherOrchestrator.GetCurrentWeather();
+            DashboardIndexViewModel viewModel = new DashboardIndexViewModel(quote, apod, weather);
             return View(viewModel);
         }
     }

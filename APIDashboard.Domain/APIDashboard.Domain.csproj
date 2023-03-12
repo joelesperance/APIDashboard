@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Orchestrators\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\APIDashboard.CrossCutting\APIDashboard.CrossCutting.csproj" />
     <ProjectReference Include="..\APIDashboard.Infrastructure\APIDashboard.Infrastructure.csproj" />
   </ItemGroup>
