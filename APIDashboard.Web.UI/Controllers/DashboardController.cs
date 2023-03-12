@@ -17,8 +17,8 @@ namespace APIDashboard.Web.UI.Controllers
         public IActionResult Index()
         {
             Quote quote = quoteOrchestrator.GetRandomQuote();
-            QuoteViewModel quoteViewModel = new QuoteViewModel(quote);
-            return View(quoteViewModel);
+            DashboardIndexViewModel viewModel = new DashboardIndexViewModel(quote);
+            return View(viewModel);
         }
     }
 }

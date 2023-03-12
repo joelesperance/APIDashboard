@@ -17,9 +17,13 @@ namespace APIDashboard.Infrastructure.Repositories
             Quote quote;
 
             using HttpClient client = new HttpClient();
+            
             HttpResponseMessage response = await client.GetAsync($"{url}/random");
+            
             string result = response.Content.ReadAsStringAsync().Result;
+            
             quote = Newtonsoft.Json.JsonConvert.DeserializeObject<Quote>(result);
+            
             return quote;
         }
     }

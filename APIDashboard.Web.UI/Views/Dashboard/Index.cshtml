@@ -1,48 +1,40 @@
-﻿@model APIDashboard.Web.UI.Models.QuoteViewModel
+﻿@model APIDashboard.Web.UI.Models.DashboardIndexViewModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<div>
-    <h4>QuoteViewModel</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.content)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.author)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.author)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.authorSlug)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.authorSlug)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.length)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.length)
-        </dd>
-    </dl>
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>Quote</h2>
+                <p class="lead">A new random quote, each time you refresh the page.</p>
+                <p class="mb-0">"
+                    @Html.DisplayFor(model => model.QuoteContent)
+                "</p>
+                <p class="mb-0">--
+                        @Html.DisplayFor(model => model.QuoteAuthor)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Image element - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/4ulffa6qoKA/1200x800')">
+    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+    <div style="height: 20rem"></div>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+<!-- Content section-->
+<section class="py-5">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>Engaging Background Images</h2>
+                <p class="lead">The background images used in this template are sourced from Unsplash and are open source and free to use.</p>
+                <p class="mb-0">I can't tell you how many people say they were turned off from science because of a science teacher that completely sucked out all the inspiration and enthusiasm they had for the course.</p>
+            </div>
+        </div>
+    </div>
+</section>
