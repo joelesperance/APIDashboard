@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APIDashboard.CrossCutting\APIDashboard.CrossCutting.csproj" />
+    <ProjectReference Include="..\APIDashboard.Infrastructure\APIDashboard.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
